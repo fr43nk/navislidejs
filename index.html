@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Navigation Plugin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="dist/main.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <nav>
+		<div id="navigation_button">
+			<div class="stroke top"></div>
+			<div class="stroke middle"></div>
+			<div class="stroke bottom"></div>
+		</div>
+		<div id="navigation" class="no-gutters w-100">
+			<ul class="row no-gutters">
+				<li class="col-md">Home</li>
+				<li class="col-md">About</li>
+				<li class="col-md">Imprint</li>
+			</ul>
+		</div>
+	</nav>
+	<content>
+		<h1>Hallo Welt!</h1>
+		<div>
+			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+		</div>
+	</content>
+	<script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="dist/navigation.min.js"></script>
+	<script type="text/javascript">
+		var navPlugin = new NavigationPlugin({navigationButtonId: "navigation_button"});
+	</script>
+</body>
+</html>

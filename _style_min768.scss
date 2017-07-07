@@ -1,0 +1,21 @@
+@media screen and (min-width:768px)
+{
+	body{
+		background-color: rgba(200,20,200, 0.4);
+		font-size: 13pt;
+	}
+
+	#navigation{
+		position: relative;
+		left: 0px;
+		transform: translateX(0px);
+	}
+
+	#navigation_button{
+		display: none;
+	}
+
+	.blur{
+		display: none;
+	}
+}
