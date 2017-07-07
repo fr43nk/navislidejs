@@ -1,10 +1,8 @@
 'use strict';
 
-import './main.scss';
-
 import AddClickOrTouch from "./addclickortouch.js";
 
-function NavigationPlugin(iOptions){
+function NaviSlideJs(iOptions){
 	this.options = {
 		navigationListId: "navigation",
 		navigationButtonId: "navigation_button",
@@ -23,7 +21,7 @@ function NavigationPlugin(iOptions){
 	this.init(iOptions);
 };
 
-NavigationPlugin.prototype.init = function(iOptions){
+NaviSlideJs.prototype.init = function(iOptions){
 	var lThat = this;
 	Object.keys(iOptions).forEach(function(key, index){
 		Object.keys(lThat.options).forEach(function(key2, index2){
@@ -42,7 +40,7 @@ NavigationPlugin.prototype.init = function(iOptions){
 	lThat.setupEvents();
 };
 
-NavigationPlugin.prototype.setupEvents = function(){
+NaviSlideJs.prototype.setupEvents = function(){
 	var lThat = this;
 	AddClickOrTouch( this.navButton, function(){
 		if( lThat.navList.classList.contains("show") )
@@ -73,4 +71,4 @@ NavigationPlugin.prototype.setupEvents = function(){
 	});
 };
 
-export { NavigationPlugin };
+export { NaviSlideJs };

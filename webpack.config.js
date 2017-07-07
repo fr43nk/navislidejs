@@ -4,12 +4,12 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  entry: './src/navigation.js',
+  entry: './src/js/main.js',
   output: {
 		
 		libraryTarget: "window",
     path: path.resolve(__dirname, 'dist'),
-    filename: 'navigation.min.js'
+    filename: 'navislidejs.min.js'
   },
 	module: {
 		rules: [{
