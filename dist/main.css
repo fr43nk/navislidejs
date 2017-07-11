@@ -1,0 +1,96 @@
+nav {
+  position: relative;
+  display: block;
+  z-index: 999;
+  text-align: left; }
+
+#navigation_list {
+  position: absolute;
+  transform: translateX(-110%);
+  transition: transform 0.6s ease-in-out;
+  font-size: 1.6em;
+  left: 0.2em;
+  right: 0.2em; }
+  #navigation_list ul {
+    position: relative;
+    list-style-position: outside;
+    list-style-type: none;
+    padding-left: 0px;
+    text-align: center; }
+    #navigation_list ul li {
+      background-color: #d2d2d2;
+      color: #050505;
+      margin: 0.3em auto 0.2em auto;
+      line-height: 1.6em; }
+
+#navigation_button {
+  position: relative;
+  z-index: 999;
+  background-color: rgba(3, 3, 3, 0.9);
+  border: 1px solid rgba(10, 10, 10, 0);
+  width: 2em;
+  height: 2em;
+  overflow: hidden;
+  touch-action: none; }
+
+#navigation_button div {
+  position: relative;
+  overflow: hidden;
+  width: 1.5em;
+  height: 0.2em;
+  background-color: white;
+  margin: 0.3em auto 0em auto;
+  transition: transform 0.3s, all 0.3s; }
+
+#navigation_button div:nth-child(odd) {
+  transform: translateY(0em) rotateZ(0deg);
+  transform-origin: 50% 50%; }
+
+#navigation_button div:nth-child(even) {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em; }
+
+.show {
+  z-index: 999 !important;
+  transform: translateX(0em) !important; }
+
+.blur {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background-color: rgba(3, 3, 3, 0.9);
+  transition: all 0.3s ease-in;
+  opacity: 0.0; }
+
+.hide-blur {
+  display: none; }
+
+.show-blur {
+  display: block; }
+
+.bg-none {
+  background-color: transparent !important; }
+
+.rot-45 {
+  transform: translateY(0.6em) rotateZ(45deg) !important; }
+
+.rot--45 {
+  transform: translateY(-0.6em) rotateZ(-45deg) !important; }
+
+.opacity-0 {
+  opacity: 0.0 !important; }
+
+.opacity-1 {
+  opacity: 1.0 !important; }
+
+@media screen and (min-width: 768px) {
+  #navigation_list {
+    position: relative;
+    left: 0px;
+    transform: translateX(0px); }
+  #navigation_button {
+    display: none; }
+  .blur {
+    display: none; } }
