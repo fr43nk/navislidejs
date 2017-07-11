@@ -14,6 +14,28 @@ To use the slider in your webside just add the following:
 </script>
 ```
 
+### Options
+
+To use different id names it is possible to pass them into the constructor.
+Valid properties with their default values are:
+```
+{
+  navigationListId: "navigation_list",
+  navigationButtonId: "navigation_button",
+  rotateLeftClass: "rot--45",
+  rotateRightClass: "rot-45",
+  opacityClass: "opacity-0",
+	blurParentId: ""
+}
+```
+
+* `navigationListId`: the list that contains the navigation links
+* `navigationButtonId`: the button that fires the event
+* `rotateLeftClass`: class name of the rotation left style
+* `rotateRightClass`: class name of the rotation right style
+* `opacityClass`: class name to hide the middle stroke
+* `blurParentId`: id of the parent element where the darken/blur layer is inserted. If empty, the body tag is used
+
 ## Example
 
 You can have a look at the index.html of this project to see the full usage of the plugin.
@@ -21,18 +43,18 @@ You can have a look at the index.html of this project to see the full usage of t
 In short, just create something like:
 ```
 <nav>
-	<div id="navigation_button">
-		<div class="stroke top"></div>
-		<div class="stroke middle"></div>
-		<div class="stroke bottom"></div>
-	</div>
-	<div id="navigation">
-		<ul>
-			<li>Home</li>
-			<li>About</li>
-			<li>Imprint</li>
-		</ul>
-	</div>
+  <div id="navigation_button">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div id="navigation_list">
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Imprint</li>
+    </ul>
+  </div>
 </nav>
 ```
 
