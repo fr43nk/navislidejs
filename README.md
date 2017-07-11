@@ -25,7 +25,7 @@ Valid properties with their default values are:
   rotateLeftClass: "rot--45",
   rotateRightClass: "rot-45",
   opacityClass: "opacity-0",
-	blurParentId: ""
+  blurParentId: ""
 }
 ```
 
@@ -50,9 +50,9 @@ In short, just create something like:
   </div>
   <div id="navigation_list">
     <ul>
-      <li>Home</li>
-      <li>About</li>
-      <li>Imprint</li>
+      <li><a href="/#">Home</a></li>
+      <li><a href="/#">About</a></li>
+      <li><a href="/#">Imprint</a></li>
     </ul>
   </div>
 </nav>
