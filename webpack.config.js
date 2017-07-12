@@ -20,7 +20,7 @@ module.exports = {
 		}]
 	},
 	plugins: [
-		new ExtractTextPlugin("main.css"),
-		new Uglify({sourceMap:false, compress:false, beautify:true})
+		new ExtractTextPlugin("navislidejs.css"),
+		new Uglify({sourceMap:true, compress:true, beautify:true})
 	]
 };
