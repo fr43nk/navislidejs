@@ -1,0 +1,15 @@
+.blur{
+	position: absolute;
+	top:0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	background-color: rgba(3, 3, 3, 0.9);
+}
+
+@media screen and (min-width:768px)
+{
+	.blur{
+		display: none;
+	}
+}
