@@ -36,17 +36,17 @@ export class NaviSlideJsComponent {
 
   ngAfterViewInit()
   {
-    //console.log("Elm:", this.renderer.selectRootElement("body"));
-
     this.blurLayer.hide();
 
     this.onButonChlickedSubscription = this.buttonElm.onButtonClicked.subscribe((state) => {
       if( state == true )
       {
         this.setBlurLayer();
+        this.listElm.setVisible(true);
       }
       else
       {
+        this.listElm.setVisible(false);
         this.clearBlurLayer();
       }
     });
@@ -65,8 +65,6 @@ export class NaviSlideJsComponent {
         break;
       node = this.renderer.parentNode(node);
     }
-
-    //let body = this.renderer.selectRootElement("app-root");
     this.renderer.appendChild(node, this.blurLayer.element().nativeElement);
   }
 

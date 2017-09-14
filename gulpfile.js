@@ -13,6 +13,7 @@ const srcFolder = path.join(rootFolder, 'src');
 const tmpFolder = path.join(rootFolder, '.tmp');
 const buildFolder = path.join(rootFolder, 'build');
 const distFolder = path.join(rootFolder, 'dist');
+const testFolder = path.join(rootFolder, '../../angular/todo-app/node_modules/navislidejs');
 
 /**
  * 1. Delete /dist folder
@@ -170,6 +171,15 @@ gulp.task('copy:readme', function () {
 });
 
 /**
+ * 9.1 Copy to test folder
+ */
+gulp.task('copy:test', function () {
+  return gulp.src([`${distFolder}/*`])
+    .pipe(gulp.dest(testFolder));
+});
+
+
+/**
  * 10. Delete /.tmp folder
  */
 gulp.task('clean:tmp', function () {
@@ -194,6 +204,7 @@ gulp.task('compile', function () {
     'copy:build',
     'copy:manifest',
     'copy:readme',
+    'copy:test',
     'clean:build',
     'clean:tmp',
     function (err) {

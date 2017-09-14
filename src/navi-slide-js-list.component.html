@@ -1,4 +1,4 @@
-<div id="{{listId}}">
+<div id="{{listId}}" [@listAnimation]="visible">
 	<ul>
 		<li *ngFor="let entry of listEntries"><a href="{{entry.url}}">{{entry.name}}</a></li>
 	</ul>

@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild, Input, EventEmitter, ViewEncapsulation, OnDestroy } from '@angular/core';
+import { Component, HostListener, EventEmitter, ViewEncapsulation, OnDestroy } from '@angular/core';
 import { trigger, transition, style, animate, state } from '@angular/animations';
 
 @Component({
@@ -25,29 +25,18 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
 })
 export class NaviSlideJsButtonComponent {
 
-	@Input("listElem") listElem: any;
-
 	onButtonClicked : EventEmitter<any> = new EventEmitter<any>();
 	private isTouchActive: boolean = false;
 	private isReady: boolean = true;
 	private isHidden: boolean = true;
 	private hasTransitionEvs: boolean = true;
-	private navList: any;
-	private options: any = {
-		navigationListId: "navigation_list",
-		navigationButtonId: "navigation_button",
-		rotateLeftClass: "rot-45",
-		rotateRightClass: "rot--45",
-		opacityClass: "opacity-0",
-		blurParentId: ""
-	};
+	private buttonId: string = "navigation_button";
 
-	constructor(private el: ElementRef) {
+	constructor() {
 	}
 
 	ngAfterViewInit()
 	{
-		this.navList = this.listElem.el.nativeElement.children[0];
 	}
 
 	addClickOrTouch()
@@ -55,20 +44,8 @@ export class NaviSlideJsButtonComponent {
 		if( this.isReady === true || this.hasTransitionEvs === false )
 		{
 			this.isReady = false;
-			if( this.navList.classList.contains("show") )
-			{
-				this.isHidden = true;
-				this.navList.classList.remove("show");
-				this.el.nativeElement.children[0].classList.remove("bg-none");
-				this.onButtonClicked.emit(false);
-			}
-			else
-			{
-				this.isHidden = false;
-				this.navList.classList.add("show");
-				this.el.nativeElement.children[0].classList.add("bg-none");
-				this.onButtonClicked.emit(true);
-			}
+			this.onButtonClicked.emit(this.isHidden);
+			this.isHidden = !this.isHidden;
 		}
 	}
 
