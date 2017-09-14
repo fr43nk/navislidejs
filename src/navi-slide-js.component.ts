@@ -2,7 +2,7 @@ import { Component, ElementRef, HostListener, ViewChild, Input, ViewEncapsulatio
 
 import {NaviSlideJsButtonComponent} from './navi-slide-js-button.component';
 import {NaviSlideJsListComponent} from './navi-slide-js-list.component';
-import {NaviBlurLayerComponent} from './navi-blur-layer.component';
+import {NaviSlideJsBlurLayerComponent} from './navi-slide-js-blur-layer.component';
 
 @Component({
   selector: 'navi-slide-js',
@@ -18,7 +18,7 @@ export class NaviSlideJsComponent {
 
   @ViewChild(NaviSlideJsButtonComponent) buttonElm: NaviSlideJsButtonComponent;
   @ViewChild(NaviSlideJsListComponent) listElm: NaviSlideJsListComponent;
-  @ViewChild(NaviBlurLayerComponent) blurLayer: NaviBlurLayerComponent;
+  @ViewChild(NaviSlideJsBlurLayerComponent) blurLayer: NaviSlideJsBlurLayerComponent;
 
   constructor(private el: ElementRef,
               private renderer: Renderer2) {

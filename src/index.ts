@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NaviSlideJsComponent } from './navi-slide-js.component';
 import { NaviSlideJsButtonComponent } from './navi-slide-js-button.component';
 import { NaviSlideJsListComponent } from './navi-slide-js-list.component';
-import { NaviBlurLayerComponent } from './navi-blur-layer.component';
+import { NaviSlideJsBlurLayerComponent } from './navi-slide-js-blur-layer.component';
 
 export * from './navi-slide-js.component';
 
@@ -18,7 +18,7 @@ export * from './navi-slide-js.component';
     NaviSlideJsComponent,
     NaviSlideJsButtonComponent,
     NaviSlideJsListComponent,
-    NaviBlurLayerComponent
+    NaviSlideJsBlurLayerComponent
   ],
   exports: [
     NaviSlideJsComponent

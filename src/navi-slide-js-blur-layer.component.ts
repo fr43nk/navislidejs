@@ -2,7 +2,7 @@ import { Component, Type, ElementRef, HostListener, EventEmitter } from '@angula
 import { trigger, transition, style, animate, state } from '@angular/animations';
 
 @Component({
-	selector: "blur-layer",
+	selector: "navi-slide-js-blur-layer",
 	template: `
 		<div class="blur" [@layerAnimation]="showBlur" (@layerAnimation.start)="onTransitionStartEvent($event)" (@layerAnimation.done)="onTransitionEndEvent($event)" ></div>`,
 	styleUrls: ['./scss/blur-layer.component.scss'],
@@ -14,7 +14,7 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
 		])
 	]
 })
-export class NaviBlurLayerComponent {
+export class NaviSlideJsBlurLayerComponent {
 
 	onReadyChanged : EventEmitter<any> = new EventEmitter<any>();
 
